@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <title>文档的压缩与打包 - dacy</title>
+    <link href='/images/fav.png' rel='shortcut icon'>
+<link href='/atom.xml' rel='alternate' type='application/rss+xml'>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/highlight.css">
+<link rel="stylesheet" href="/css/responsive.css">
+<script src="/js/jquery.js"></script>
+<script src="/js/basics.js"></script>
+<meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
+<meta content='text/html; charset=utf-8' http-equiv='content-type'>
+
+
+  </head>
+  <body>
+    <header>
+  <a id='go-back-home' href='/'><img src='/images/scribble.png' alt='Home' width='53' height='59'></a>
+  <p>dacy</p>
+  <p>愿你走出半生 归来仍是少年</p>
+</header>
+
+    <div id='container'>
+      <div class='block'>
+  
+    <a class='main' href='/'>Home</a>
+  
+    <a class='main' href='/about'>About</a>
+  
+    <a class='main' href='/email'>Email</a>
+  
+    <a class='main' href='https://github.com/dacyzhan'>Github</a>
+  
+</div>
+
+      <section class='paging'>
+  
+    <div class='left'>
+      <a href='/2018/06/09/回首过去，展望未来/'>
+        ‹
+      </a>
+    </div>
+  
+  
+    <div class='right'>
+      <a href='/2017/05/21/Linux 文本编辑工具vim 学习/'>
+        ›
+      </a>
+    </div>
+  
+</section>
+
+      <div class='content'>
+        <section class='post'>
+          <h1>
+            <div class='date'>2017-06-24</div>
+            文档的压缩与打包
+          </h1>
+          <p>GZ GZIP 压缩工具压缩的文件</p>
+<p>.BZ2 BZIP2 压缩工具压缩的文件</p>
+<p>.TAR TAR 打包程序打包的文件(TAR并没有压缩功能，只是把一个目录合并成一个文件)</p>
+<p>.TAR.GZ    可以理解为先用TAR打包，然后再GZIP压缩</p>
+<p>.TAR.BZ2    同上，先用TAR打包，然后再BZIP2压缩</p>
+<p>【GZIP】</p>
+<p>语法： GZIP [-D#] FILENAME 其中#为1-9的数字</p>
+<p>-D ：解压缩时使用</p>
+<p>-# ：压缩等级，1压缩最差，9压缩最好，6为默认</p>
+<p>【BZIP2】</p>
+<p>语法：BZIP2 [-DZ] FILENAME</p>
+<p>-D ：解压缩</p>
+<p>-Z ：压缩</p>
+<p>【TAR】</p>
+<p>语法：TAR [-ZJXCVFPP]   *.TAR  FILENAME</p>
+<p>*.TAR 是指打包后的名称</p>
+<p>-Z ：是否同时用GZIP压缩</p>
+<p>-J ：是否同时用BZIP2压缩</p>
+<p>-X ：解包或者解压缩</p>
+<p>-T ：查看TAR包里面的文件</p>
+<p>-C ：建立一个TAR包或者压缩文件包</p>
+<p>-V ：可视化</p>
+<p>-F ：后面跟文件名，压缩时跟-F文件名，意思是压缩后的文件名为FILENAME，解压时跟-F文件名，意思是解压FILENAME。请注意，如果是多个参数组合的情况下带有-F，请把F写到最后面。</p>
+<p>-P ：使用原文件的属性，压缩前什么属性压缩后还什么属性。（不常用）</p>
+<p>-P ：可以使用绝对路径。（不常用）</p>
+<p>–EXCLUDE FILENAME ：在打包或者压缩时，不要将FILENAME文件包括在内。（不常用）</p>
+<p>命令常用方式 举例： TAR -ZCVF TEST.TAR TEST </p>
+
+          <br>
+<p>dacy</p>
+<p><img src='/images/scribble3.png' alt='scribble'></p>
+
+        </section>
+      </div>
+      
+      <div class='block'>
+  
+    <a class='main' href='/'>Home</a>
+  
+    <a class='main' href='/about'>About</a>
+  
+    <a class='main' href='/email'>Email</a>
+  
+    <a class='main' href='https://github.com/dacyzhan'>Github</a>
+  
+</div>
+
+    </div>
+    <footer>
+  <span class='muted'>&copy; dacy. All Rights Reserved.</span><br>
+  <a href='https://github.com/saintwinkle/hexo-theme-scribble' class='muted'>built with Hexo using Scribble theme</a>
+  <br>
+  <br>
+  <img src='/images/scribble2.png' alt='scribble' />
+</footer>
+
+  </body>
+</html>
