@@ -1,0 +1,150 @@
+<html>
+  <head>
+    <title> - dacy</title>
+    <link href='/images/fav.png' rel='shortcut icon'>
+<link href='/atom.xml' rel='alternate' type='application/rss+xml'>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/highlight.css">
+<link rel="stylesheet" href="/css/responsive.css">
+<script src="/js/jquery.js"></script>
+<script src="/js/basics.js"></script>
+<meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
+<meta content='text/html; charset=utf-8' http-equiv='content-type'>
+
+
+  </head>
+  <body>
+    <header>
+  <a id='go-back-home' href='/'><img src='/images/scribble.png' alt='Home' width='53' height='59'></a>
+  <p>dacy</p>
+  <p>愿你走出半生 归来仍是少年</p>
+</header>
+
+    <div id='container'>
+      <div class='block'>
+  
+    <a class='main' href='/'>Home</a>
+  
+    <a class='main' href='/about'>About</a>
+  
+    <a class='main' href='/email'>Email</a>
+  
+    <a class='main' href='https://github.com/dacyzhan'>Github</a>
+  
+</div>
+
+      <section class='paging'>
+  
+    <div class='left'>
+      <a href='/2018/06/09/Linux文档的压缩和打包/'>
+        ‹
+      </a>
+    </div>
+  
+  
+    <div class='right'>
+      <a href='/2018/06/09/hello-world/'>
+        ›
+      </a>
+    </div>
+  
+</section>
+
+      <div class='content'>
+        <section class='post'>
+          <h1>
+            <div class='date'>2018-06-09</div>
+            
+          </h1>
+          <p>VIM的三种模式：一般模式、编辑模式、命令模式。</p>
+<ol>
+<li><ul>
+<li>一般模式： 当你VIM FILENAME 编辑一个文件时，一进入该文件就是一般模式了。在这个模式下，你可以做的操作有，上下移动光标。</li>
+</ul>
+</li>
+<li><ul>
+<li>编辑模式：一般模式下，是不可以修改某一个字符的，只能到编辑模式了。从一般模式进入编辑模式，只需你按一个键即可（I,I,A,A,O,O,R,R）。当进入编辑模式时，会在屏幕的最下一行出现“INSERT或REPLACE”的字样。从编辑模式回到一般模式只需要按一下键盘左上方的ESC键即可。</li>
+</ul>
+</li>
+<li><ul>
+<li>命令模式：在一般模式下，输入”:”或者”/”即可进入命令模式。在该模式下，你可以搜索某个字符或者字符串，也可以保存、替换、退出、显示行号等等。</li>
+</ul>
+</li>
+</ol>
+<p>编辑文件流程：</p>
+<p>1.VIM FILENAME;(此时进入一般模式)。</p>
+<p>2.输入 I 进入编辑模式（屏幕的最下一行出现“INSERT或REPLACE”的字样）。</p>
+<p>3.修改文件内容，按 ESC键 退出编辑模式进入到一般模式 。</p>
+<p>4.输入   ：WQ [FILENAME] 退出一般模式。</p>
+<p>其实VIM为全键盘操作的编辑器，所以在各个模式下都有很多功能键盘的。</p>
+<h2 id="一般模式下移动光标"><a href="#一般模式下移动光标" class="headerlink" title="一般模式下移动光标"></a>一般模式下移动光标</h2><p>H或向左方向键<br>光标向左移动一个字符</p>
+<p>J或者向下方向键<br>光标向下移动一个字符</p>
+<p>K或者向上方向键<br>光标向上移动一个字符</p>
+<p>L或者向右方向键<br>光标向右移动一个字符</p>
+<p>CTRL + F 或者PAGEUP键<br>屏幕向前移动一页</p>
+<p>CTRL + B 或者PAGEDOWN键<br>屏幕向后移动一页</p>
+<p>0（数字0）或者SHIFT+6<br>移动到本行行首</p>
+<p>SHIFT+4<br>即’$’移动到本行行尾</p>
+<p>G<br>光标移动到文本的最末行</p>
+<p>NG（N是数字）<br>移动到该文本的第N行</p>
+<p>GG<br>移动带该文本的首行</p>
+<p>##<br>一般模式下查找与替换 ##</p>
+<p>/WORD<br>向光标之后寻找一个字符串名为WORD的字符串，当找到第一个WORD后，按”N”继续搜后一个</p>
+<p>?WORD<br>想光标之前寻找一个字符串名为WORD的字符串，当找到第一个WORD后，按”N”继续搜前一个</p>
+<p>:N1,N2S/WORD1/WORD2/G<br>在N1和N2行间查找WORD1这个字符串并替换为WORD2，你也可以把”/”换成”#”</p>
+<p>:1,$S/WORD1/WORD2/G<br>从第一行到最末行，查找WORD1并替换成WORD2</p>
+<h2 id="一般模式下删除、复制粘贴"><a href="#一般模式下删除、复制粘贴" class="headerlink" title="一般模式下删除、复制粘贴"></a>一般模式下删除、复制粘贴</h2><p>X,X<br>X为向后删除一个字符，X为向前删除一个字符</p>
+<p>DD<br>删除光标所在的那一行</p>
+<p>NDD（N为数字）<br>删除光标所在的向下N行</p>
+<p>YY<br>复制光标所在的那行</p>
+<p>NYY<br>复制从光标所在行起向下N行</p>
+<p>P,P<br>P复制的数据从光标下一行粘贴，P则从光标上一行粘贴</p>
+<p>#<br>进入编辑模式 #</p>
+<p>I<br>在当前字符前插入字符</p>
+<p>I<br>在当前行行首插入字符</p>
+<p>A<br>在当前字符后插入字符</p>
+<p>A<br>在当前行行末插入字符</p>
+<p>O<br>在当前行下插入新的一行</p>
+<p>O<br>在当前行上插入新的一行</p>
+<p>命令模式<br>:W<br>将编辑过的文本保存</p>
+<p>:W!<br>若文本属性为只读时，强制保存</p>
+<p>:Q<br>退出VIM</p>
+<p>:Q!<br>不管编辑或未编辑都不保存退出</p>
+<p>:WQ<br>保存，退出</p>
+<p>ZZ<br>若文档没有改动，则不储存离开，若文档改动过，则储存后离开，等同于:WQ</p>
+<p>:W [FILENAME]<br>编辑后的文档另存为FILENAME</p>
+<p>:R [FILENAME]<br>在当前光标所在行的下面读入FILENAME文档的内容</p>
+<p>:SET NU<br>在每行的行首显示行号</p>
+<p>:SET NONU<br>取消行号</p>
+<p>N1,N2 W [FILENAME]<br>将N1到N2的内容</p>
+
+          <br>
+<p>dacy</p>
+<p><img src='/images/scribble3.png' alt='scribble'></p>
+
+        </section>
+      </div>
+      
+      <div class='block'>
+  
+    <a class='main' href='/'>Home</a>
+  
+    <a class='main' href='/about'>About</a>
+  
+    <a class='main' href='/email'>Email</a>
+  
+    <a class='main' href='https://github.com/dacyzhan'>Github</a>
+  
+</div>
+
+    </div>
+    <footer>
+  <span class='muted'>&copy; dacy. All Rights Reserved.</span><br>
+  <a href='https://github.com/saintwinkle/hexo-theme-scribble' class='muted'>built with Hexo using Scribble theme</a>
+  <br>
+  <br>
+  <img src='/images/scribble2.png' alt='scribble' />
+</footer>
+
+  </body>
+</html>
